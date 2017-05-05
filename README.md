@@ -1,6 +1,8 @@
 docker-clif
 ===========
+
 ![CLIF logo](clif_100.png "CLIF is a Load Injection Framework")
+
 what to do with it?
 -------------------
 
@@ -37,7 +39,7 @@ usage
   <dt>$ docker run -t -i --network host -u clif -w /home/clif dillense/clif</dt>
   <dd>Same as above, except current host address is used instead of Docker's default bridge NAT'ed address. Option "--network host" is mandatory as soon as you perform distributed testing with CLIF servers (docker-clif instances) spread over different hosts, because CLIF's internals don't support NAT.</dd>
   <p>
-  <dt>docker run -t -i --network host -u clif -w /home/clif dillense/clif -c "clifcmd config somehost && clifcmd server clif1"</dt>
+  <dt>$ docker run -t -i --network host -u clif -w /home/clif dillense/clif -c "clifcmd config somehost && clifcmd server clif1"</dt>
   <dd>Same as above, but runs a command (actually two CLIF commands) instead of running an interactive shell.</dd>
   </p>
 </dl>
