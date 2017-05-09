@@ -23,33 +23,33 @@ Notes:
 
 usage
 -----
-<dl>
-  <p>
-  <dt>$ docker pull dillense/clif</dt>
-  <dd>Import the docker-clif image to your local repository.</dd>
-  </p>
-  <p>
-  <dt>$ docker images</dt>
-  <dd>Check the docker-clif image is in your local repository.</dd>
-  </p>
-  <p>
-  <dt>$ docker run -t -i -u clif -w /home/clif dillense/clif</dt>
-  <dd>Launches a docker-clif container with an interactive shell, logged as user clif and with current directory set to /home/clif. All CLIF commands are available right away.</dd>
-  </p>
-  <dt>$ docker run -t -i --network host -u clif -w /home/clif dillense/clif</dt>
-  <dd>Same as above, except current host address is used instead of Docker's default bridge NAT'ed address. Option "--network host" is mandatory as soon as you perform distributed testing with CLIF servers (docker-clif instances) spread over different hosts, because CLIF's internals don't support NAT.</dd>
-  <p>
-  <dt>$ docker run -t -i --network host -u clif -w /home/clif dillense/clif -c "clifcmd config somehost && clifcmd server clif1"</dt>
-  <dd>Same as above, but runs a command (actually two CLIF commands) instead of running an interactive shell.</dd>
-  </p>
-</dl>
+
+- `$ docker pull dillense/clif`
+
+    Import the docker-clif image to your local repository.
+
+- `$ docker images`
+
+    Check the docker-clif image is in your local repository.
+
+- `$ docker run -t -i -u clif -w /home/clif dillense/clif`
+
+    Launch a docker-clif container with an interactive shell, logged as user clif and with current directory set to /home/clif. All CLIF commands are available right away.
+
+- `$ docker run -t -i --network host -u clif -w /home/clif dillense/clif`
+
+    Same as above, except current host address is used instead of Docker's default bridge NAT'ed address. Option "--network host" is mandatory as soon as you perform distributed testing with CLIF servers (docker-clif instances) spread over different hosts, because CLIF's networking internals don't support NAT.
+
+- `$ docker run -t -i --network host -u clif -w /home/clif dillense/clif -c "clifcmd config somehost && clifcmd server clif1"`
+
+    Same as above, but runs a command (actually two CLIF commands) instead of running an interactive shell.
 
 Refer to chapter 8.2 of [CLIF's user manual](http://clif.ow2.org/doc/user_manual/manual/UserManual.pdf "PDF") for a complete reference of clif commands. Test plans and scenarios examples may be found [here](http://clif.ow2.org/doc/clif-examples.zip "Download CLIF examples"). Some CLIF command examples are given below.
 
 example
 -------
-<pre>
-$ docker run -t -i -u clif -w /home/clif dillense/clif
+```
+docker run -t -i -u clif -w /home/clif dillense/clif</address>
 clif@845774c7c9da:~$ wget http://clif.ow2.org/doc/clif-examples.zip
 [...]
 clif@845774c7c9da:~$ unzip clif-examples.zip
@@ -76,9 +76,9 @@ dummy action 	   536	     1	   998	504.703	   503	288.320	17.974	    63
 GLOBAL LOAD	   536	     1	   998	504.703	   503	288.320	17.974	    63
 Quick statistics report done
 clif@845774c7c9da:~/examples$ more report/dummy1*/0/action
-# date, session id, action type, iteration, success, duration, comment, result
+\# date, session id, action type, iteration, success, duration, comment, result
 261,0,dummy action,0,true,378,successful dummy request,378
 261,17,dummy action,0,true,638,successful dummy request,638
 261,19,dummy action,0,true,215,successful dummy request,215
 [...]
-</pre>
+```
