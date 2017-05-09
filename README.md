@@ -1,7 +1,7 @@
 docker-clif
 ===========
 
-![CLIF logo](clif_100.png "CLIF is a Load Injection Framework")
+![CLIF logo](https://raw.githubusercontent.com/dillense/docker-clif/master/clif_100.png "CLIF is a Load Injection Framework")
 
 what to do with it?
 -------------------
