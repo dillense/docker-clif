@@ -49,7 +49,7 @@ Refer to chapter 8.2 of [CLIF's user manual](http://clif.ow2.org/doc/user_manual
 example
 -------
 ```
-docker run -t -i -u clif -w /home/clif dillense/clif</address>
+$ docker run -t -i -u clif -w /home/clif dillense/clif</address>
 clif@845774c7c9da:~$ wget http://clif.ow2.org/doc/clif-examples.zip
 [...]
 clif@845774c7c9da:~$ unzip clif-examples.zip
@@ -76,7 +76,7 @@ dummy action 	   536	     1	   998	504.703	   503	288.320	17.974	    63
 GLOBAL LOAD	   536	     1	   998	504.703	   503	288.320	17.974	    63
 Quick statistics report done
 clif@845774c7c9da:~/examples$ more report/dummy1*/0/action
-\# date, session id, action type, iteration, success, duration, comment, result
+# date, session id, action type, iteration, success, duration, comment, result
 261,0,dummy action,0,true,378,successful dummy request,378
 261,17,dummy action,0,true,638,successful dummy request,638
 261,19,dummy action,0,true,215,successful dummy request,215
