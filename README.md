@@ -49,7 +49,7 @@ Refer to chapter 8.2 of [CLIF's user manual](http://clif.ow2.org/doc/user_manual
 example
 -------
 ```
-$ docker run -t -i -u clif -w /home/clif dillense/clif</address>
+$ docker run -t -i -u clif -w /home/clif dillense/clif
 clif@845774c7c9da:~$ wget http://clif.ow2.org/doc/clif-examples.zip
 [...]
 clif@845774c7c9da:~$ unzip clif-examples.zip
