@@ -2,13 +2,13 @@ FROM ubuntu:16.04
 
 LABEL maintainer="bruno.dillenseger@orange.com"
 
-ENV CLIF clif-2.3.5-swingGui
+ENV CLIF clif-2.3.6-server
 ENV JAVA openjdk-8-jdk
 
 RUN \
 	apt-get update && \
 	apt-get -y install vim wget unzip $JAVA iproute2 iputils-ping dnsutils net-tools && \
-	wget -q http://download.forge.ow2.org/clif/$CLIF.zip -O /tmp/$CLIF.zip && \
+	wget -q http://clif.ow2.io/clif-legacy/download/$CLIF.zip -O /tmp/$CLIF.zip && \
 	unzip -d /opt /tmp/$CLIF.zip
 RUN \
 	adduser --quiet --disabled-password --gecos "CLIF user" --shell /bin/bash clif && \
