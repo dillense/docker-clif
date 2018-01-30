@@ -8,7 +8,7 @@ what to do with it?
 
 [CLIF is an open source performance testing software.](http://clif.ow2.org)
 
-Practically, docker-clif is based on a Ubuntu Linux 64 bits image, with Java OpenJDK JDK version 8, and CLIF-2.3.5-swingGui CLIF distribution package.
+Practically, docker-clif is based on a Ubuntu Linux 64 bits image, with Java OpenJDK JDK version 8, and CLIF-2.3.6-server CLIF distribution package.
 
 The provided CLIF runtime is suitable for using all line commands of CLIF, including the pure Java-based simple GUI. Therefore, this image enables you:
 - to run a CLIF registry (for registering CLIF servers),
