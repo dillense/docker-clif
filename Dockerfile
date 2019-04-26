@@ -1,8 +1,8 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 LABEL maintainer="bruno.dillenseger@orange.com"
 
-ENV CLIF clif-2.3.6-server
+ENV CLIF clif-2.3.8-server
 ENV JAVA openjdk-8-jdk
 
 RUN \
