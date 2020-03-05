@@ -50,7 +50,7 @@ example
 -------
 ```
 $ docker run -t -i -u clif -w /home/clif dillense/clif
-clif@845774c7c9da:~$ wget http://clif.ow2.org/doc/clif-examples.zip
+clif@845774c7c9da:~$ wget https://clif.ow2.io/clif-legacy/download/clif-examples.zip
 [...]
 clif@845774c7c9da:~$ unzip clif-examples.zip
 [...]
