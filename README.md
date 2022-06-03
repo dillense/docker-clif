@@ -35,11 +35,11 @@ usage
 
     Launch a docker-clif container with an interactive shell, logged as user clif and with current directory set to /home/clif. All CLIF commands are available right away.
 
-- `$ docker run -ti --network host`
+- `$ docker run -ti --network host clif`
 
     Same as above, except current host address is used instead of Docker's default bridge NAT'ed address. Option "--network host" is mandatory as soon as you perform distributed testing with CLIF servers (docker-clif instances) spread over different hosts, because CLIF's networking internals don't support NAT.
 
-- `$ docker run -ti --network host -c "clifcmd config somehost && clifcmd server clif1"`
+- `$ docker run -ti --network host clif -c "clifcmd config somehost && clifcmd server clif1"`
 
     Same as above, but runs a command (actually two CLIF commands) instead of running an interactive shell.
 
