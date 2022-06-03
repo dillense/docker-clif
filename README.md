@@ -8,14 +8,13 @@ what to do with it?
 
 [CLIF is an open source performance testing software.](http://clif.ow2.org)
 
-Practically, docker-clif is based on a Ubuntu Linux 64 bits image, with Java OpenJDK JDK version 8, and CLIF-2.3.8-server CLIF distribution package.
+Practically, docker-clif is based on a Ubuntu 22.04 image, with Java OpenJDK headless JDK version 8, and CLIF-2.3.8-server CLIF distribution package.
 
-The provided CLIF runtime is suitable for using all line commands of CLIF, including the pure Java-based simple GUI. Therefore, this image enables you:
-- to run a CLIF registry (for registering CLIF servers),
-- to run a CLIF server (for deploying load injectors and probes),
-- to deploy and run CLIF test plans over CLIF servers, either from the command line or from the simple GUI,
-- to get a quick statistical overview of response times for each test run (plus the complete set of detailed measurements),
-- to interactively analyze test measurements and generate a custom performance report from the simple GUI.
+The provided CLIF runtime is suitable for using all line commands of CLIF, including the pure Java-based simple GUI. Therefore, this image allows for:
+- running a CLIF registry (for registering CLIF servers),
+- running a CLIF server (for deploying load injectors and probes),
+- deploying and running CLIF test plans over CLIF servers,
+- getting a quick statistical overview of response times for each test run (not mentioning the complete set of detailed measurements availavle in the usual `report` folder).
 
 Notes:
 - for writing test scenarios, use [CLIF's main GUI based on Eclipse](http://forge.ow2.org/project/showfiles.php?group_id=57 "Download"), unless you are an absolute XML freak.
@@ -32,15 +31,15 @@ usage
 
     Check the docker-clif image is in your local repository.
 
-- `$ docker run -t -i -u clif -w /home/clif dillense/clif`
+- `$ docker run -ti clif`
 
     Launch a docker-clif container with an interactive shell, logged as user clif and with current directory set to /home/clif. All CLIF commands are available right away.
 
-- `$ docker run -t -i --network host -u clif -w /home/clif dillense/clif`
+- `$ docker run -ti --network host`
 
     Same as above, except current host address is used instead of Docker's default bridge NAT'ed address. Option "--network host" is mandatory as soon as you perform distributed testing with CLIF servers (docker-clif instances) spread over different hosts, because CLIF's networking internals don't support NAT.
 
-- `$ docker run -t -i --network host -u clif -w /home/clif dillense/clif -c "clifcmd config somehost && clifcmd server clif1"`
+- `$ docker run -ti --network host -c "clifcmd config somehost && clifcmd server clif1"`
 
     Same as above, but runs a command (actually two CLIF commands) instead of running an interactive shell.
 
@@ -49,7 +48,7 @@ Refer to chapter 8.2 of [CLIF's user manual](http://clif.ow2.org/doc/user_manual
 example
 -------
 ```
-$ docker run -t -i -u clif -w /home/clif dillense/clif
+$ docker run -ti
 clif@845774c7c9da:~$ wget https://clif.ow2.io/clif-legacy/download/clif-examples.zip
 [...]
 clif@845774c7c9da:~$ unzip clif-examples.zip
